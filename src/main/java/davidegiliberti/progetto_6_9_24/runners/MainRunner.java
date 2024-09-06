@@ -32,13 +32,14 @@ public class MainRunner implements CommandLineRunner {
         Edificio edificio = new Edificio("edificio 1", "via palizzi", "milano");
         edificioService.salva(edificio);
 
-        Postazione postazione = new Postazione("postazione 1", TipoPostazione.PRIVATO, 2);
+        Postazione postazione = new Postazione("postazione 1", TipoPostazione.PRIVATO, 2, edificio);
         postazioneService.salva(postazione);
 
-        Prenotazione prenotazione = new Prenotazione(LocalDateTime.parse("2024-09-06T15:00:00"));
-        prenotazioneService.salva(prenotazione);
 
         Utente utente = new Utente("giacomo", "poretti", "gporetti@gmail.com");
         utenteService.salva(utente);
+
+        Prenotazione prenotazione = new Prenotazione(LocalDateTime.parse("2024-09-06T15:00:00"), utente, postazione);
+        prenotazioneService.salva(prenotazione);
     }
 }

@@ -20,11 +20,11 @@ public class Postazione {
     public Postazione() {
     }
 
-    public Postazione(String descrizione, TipoPostazione tipoPostazione, int numeroMaxOccupanti) {
+    public Postazione(String descrizione, TipoPostazione tipoPostazione, int numeroMaxOccupanti, Edificio edificio) {
         this.descrizione = descrizione;
         this.tipoPostazione = tipoPostazione;
         this.numeroMaxOccupanti = numeroMaxOccupanti;
-        
+        this.edificio = edificio;
     }
 
     public long getId() {

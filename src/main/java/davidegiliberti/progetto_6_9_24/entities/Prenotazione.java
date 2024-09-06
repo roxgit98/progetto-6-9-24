@@ -22,8 +22,10 @@ public class Prenotazione {
     public Prenotazione() {
     }
 
-    public Prenotazione(LocalDateTime dataPrenotazione) {
+    public Prenotazione(LocalDateTime dataPrenotazione, Utente utente, Postazione postazione) {
         this.dataPrenotazione = dataPrenotazione;
+        this.utente = utente;
+        this.postazione = postazione;
     }
 
     public long getId() {
