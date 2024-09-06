@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+
 @Entity
 @Table(name = "prenotazione")
 public class Prenotazione {
@@ -21,10 +22,8 @@ public class Prenotazione {
     public Prenotazione() {
     }
 
-    public Prenotazione(LocalDateTime dataPrenotazione, Utente utente, Postazione postazione) {
+    public Prenotazione(LocalDateTime dataPrenotazione) {
         this.dataPrenotazione = dataPrenotazione;
-        this.utente = utente;
-        this.postazione = postazione;
     }
 
     public long getId() {
